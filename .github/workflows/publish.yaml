@@ -46,7 +46,9 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name}}
+          images: |
+            ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name}}
+            ghcr.io/${{ github.repository }}
 
       - name: display info
         run: |
