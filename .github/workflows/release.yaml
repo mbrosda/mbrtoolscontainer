@@ -1,3 +1,7 @@
+# to trigger the creation of a release perform
+# - RELEASE=v0.0.2
+# - git tag $RELEASE
+# - git push origin $RELEASE
 name: Create release
 
 on:
