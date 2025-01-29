@@ -11,8 +11,13 @@ name: Publish Docker image
 
 on:
   workflow_dispatch:
-  # push:
-  #   branches: [ "main" ]
+
+  # do run on pushes - but NOT on master
+  push:
+    branches:
+      - '**'
+      - '!main'
+
   release:
     types: [published]
 
